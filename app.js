@@ -61,4 +61,3 @@ function sortearAmigo() {
     const listaAmigos = document.querySelector("#listaAmigos");
     listaAmigos.innerHTML = ""; // Limpiar la lista de amigos
 }
-

@@ -2,7 +2,6 @@
 ![Status][statusBagge]
 ![Version][versionBagge]
 ![Release][releaseBagge]
-
 ## :computer:Tecnologías Utilizadas
 - Javascript
 - HTML

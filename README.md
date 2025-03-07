@@ -6,6 +6,11 @@
 - Javascript
 - HTML
 - CSS
+## :white_check_mark:Funcionalidades
+- ```Agregar nombres:``` Los usuarios escribirán el nombre de un amigo en un campo de texto y lo agregarán a una lista visible al hacer clic en el botón "Añadir".
+- ```Validar entrada:``` Si el campo de texto está vacío, el programa mostrará una alerta pidiendo un nombre válido.
+- ```Visualizar la lista:``` Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
+- ```Sorteo aleatorio:``` Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
 ## :clipboard:Bloques de códigos
 #### Mostrar en pantalla los amigos que se van añadiendo:
 ```Javascript
@@ -21,6 +26,22 @@ function renderizarAmigos(){
     }
 }
 ```
+```Javascript
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Necesitas añadir algunos nombres para poder realizar el sorteo");
+        return; // Salir de la función si no hay amigos
+    }
+    // Escoge un amigo aleatorio
+    let amigoElegido = amigos[Math.floor(Math.random() * amigos.length)];
+    // Mostrar el resultado del sorteo
+    const resultadoSorteo = document.querySelector("#resultado");
+    resultadoSorteo.textContent = `El amigo sorteado es: ${amigoElegido}`;
+    // Limpiar la lista de amigos mostrada en pantalla
+    const listaAmigos = document.querySelector("#listaAmigos");
+    listaAmigos.innerHTML = ""; // Limpiar la lista de amigos
+}
+```
 ## :clapper:Funcionamiento del programa
 ![Challege-amigo-secreto][amigo-secreto-giff]
 ## :sunglasses:Autor
@@ -29,7 +50,7 @@ function renderizarAmigos(){
 | :---: |
 
 <!-- recursos -->
-[statusBagge]:https://img.shields.io/badge/STATUS-EN%20PRODUCCION-green
+[statusBagge]:https://img.shields.io/badge/STATUS-STABLE-green
 [versionBagge]:https://img.shields.io/badge/VERSION-1.0-blue
 [releaseBagge]:https://img.shields.io/badge/RELEASE%20DATE-March-orange
 [amigo-secreto-giff]:https://github.com/user-attachments/assets/64298854-bcd4-4d78-bea3-3b86ed333225
